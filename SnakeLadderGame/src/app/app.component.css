@@ -1,7 +1,8 @@
 .home
 {
-  background-image: url("C:/Users/pramita.b/Downloads/subtle-prism.svg");
+  background-image: url("C:/Users/pramita.b/Downloads/wavey-fingerprint.svg");
   height: 100vh;
+  color : white
 }
 
 
@@ -19,7 +20,7 @@
     padding-left: 25px;
     /* margin-left:35% ; */
     text-align: center;
-    background-color:#A68F97;
+    background-color:#a68f97;
     border-radius: 50%;
    
 
@@ -50,24 +51,29 @@ tr{
   .snake{
     background-color: rgb(243, 124, 124);
     border-radius: 50px 20px;
+    color:black
 
   }
   .ladder{
     background-color: rgb(245, 245, 110);
     border-radius: 20px 50px;
+    color:black
 
   }
   .player1{
     background-color: rgb(149, 228, 149);
     border-radius: 50% 50%;
+    color :black
   }
   .player2{
     background-color: rgb(145, 145, 221);
     border-radius: 50% 50%;
+    color :black  
   }
 
   .playerboth
   {
     background-image: linear-gradient(to right , rgb(149, 228, 149), rgb(145, 145, 221));
+    color :black
   }
  

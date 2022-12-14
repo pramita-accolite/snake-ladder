@@ -8,7 +8,7 @@ import { PlayersComponent } from './players/players.component';
 export class PlayersService {
 
   constructor() { }
-  
+
   rollDice() : number{
     const diceValue =  Math.floor(Math.random() * 6) + 1;
     return diceValue;
@@ -440,9 +440,10 @@ else
 generateRandomSnake()
 {
   
-  let randomCurrPos : number = Math.floor(Math.random() *100  )+1
-  let randomTakeToPos : number =  Math.floor(Math.random() *100 )+1
+  let randomCurrPos : number = Math.floor(Math.random() *99  )+1
+  let randomTakeToPos : number =  Math.floor(Math.random() *99 )+1
 
+  
   if (randomCurrPos > randomTakeToPos  )
   {
     this.snakeList.push(randomCurrPos);
@@ -453,7 +454,8 @@ generateRandomSnake()
   }
   else if(randomCurrPos==randomTakeToPos)
   {
-    return;
+    console.log("Currpos "+randomCurrPos);
+    console.log("Taketo "+randomTakeToPos);
   }
   else
   {
@@ -466,48 +468,6 @@ generateRandomSnake()
 
 }
 
-snakeornot(p : number):boolean{
-  for(let i =0;i<this.snakeList.length; i++)
-  {
-    if (this.snakeList[i]==p)
-    return true;
-  }
-  return false;
-}
-
-ladderornot(p:number):boolean{
-for(let i =0;i<this.ladderList.length; i++)
-  {
-    if (this.ladderList[i]==p)
-    return true;
-  }
-  return false;
-}
-
-playerornot1(k : number):boolean{
-if(k==this.val1){
-  return true;
-}
-else{
-return false;
-}
-}
-
-playerornot2(k : number):boolean{
-if(k==this.val2){
-return true;
-}
-else{
-return false;
-}
-}
-
-playerBoth(k :number) :boolean {
-if(k==this.val1 && k==this.val2)
-return true;
-else 
-return false;
-}
 
 
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Coordinates } from '../coordinates';
 import { PlayersService } from '../players.service';
 
@@ -8,10 +8,11 @@ import { PlayersService } from '../players.service';
   styleUrls: ['./players.component.css']
 })
 
-export class PlayersComponent {
+export class PlayersComponent implements OnInit{
 
   constructor(private playService:PlayersService)
   {}
+
 
   @Output() goToP1 =new EventEmitter();
   @Output() goToP2 =new EventEmitter();
@@ -22,13 +23,18 @@ export class PlayersComponent {
   public disable1:boolean=false;
   public disable2:boolean=false;
 
-  public pos1 :  number=95;
-  public pos2 :  number=98;
+  public pos1 :  number=1;
+  public pos2 :  number=1;
 
   public winnerPlayer1 : boolean = false;
   public winnerPlayer2 : boolean = false;
 
   board1 : Coordinates[] = this.playService.board1
+
+  ngOnInit(): void {
+    this.goToP1.emit(1);
+    this.goToP2.emit(1);
+}
 
   generateNumber1()
   {
@@ -95,5 +101,7 @@ generateRandom()
 {
   this.playService.generateRandomSnake();
 }
+
+
 
 }

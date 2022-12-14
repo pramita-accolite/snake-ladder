@@ -14,7 +14,7 @@
 
 .card {
   
-  background-color:#A68F97;
+  background-color:#a68f9700;
   border: 1px solid #4B4952;  
   padding: 8px;
   border-radius: 12px;
@@ -58,6 +58,8 @@ button {
   margin: 0 auto;
   display: block;
   cursor: pointer;
+
+ 
 }
 
 .card__details {
@@ -71,6 +73,7 @@ button {
     padding: 3%;
     font-family: 'Cedarville Cursive', cursive;
     align-items: right;
+    font-size: 20px;
     
     
 }
