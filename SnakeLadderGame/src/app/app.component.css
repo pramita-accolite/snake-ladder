@@ -1,4 +1,8 @@
-
+.home
+{
+  background-image: url("C:/Users/pramita.b/Downloads/subtle-prism.svg");
+  height: 100vh;
+}
 
 
 .grid-container {
@@ -11,9 +15,12 @@
   
   .heading{
     font-size: 45px;
-    font-family:'Kenia';
+    font-family: 'Cedarville Cursive', cursive;
     padding-left: 25px;
-    margin-left:35% ;
+    /* margin-left:35% ; */
+    text-align: center;
+    background-color:#A68F97;
+    border-radius: 50%;
    
 
   }
@@ -23,17 +30,17 @@
     padding: 8px;
     font-size: 20px;
     text-align: center;
-   
-    
+    border-radius: 12px;
+     
   }
 
-  
 
 td{
   padding: auto;
   width : 200px;
   height : 50px ;
   text-align : center;
+ 
 }
 
 tr{
@@ -61,6 +68,6 @@ tr{
 
   .playerboth
   {
-    background-image: linear-gradient(to right , green, blue);
+    background-image: linear-gradient(to right , rgb(149, 228, 149), rgb(145, 145, 221));
   }
  

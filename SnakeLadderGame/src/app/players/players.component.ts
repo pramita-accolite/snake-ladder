@@ -87,6 +87,8 @@ resetGame()
   this.pos2 = 1;
   this.winnerPlayer1 = false;
   this.winnerPlayer2 = false;
+  this.goToP1.emit(1);
+  this.goToP2.emit(1);
 }
 
 generateRandom()

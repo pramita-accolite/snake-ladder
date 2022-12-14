@@ -1,8 +1,9 @@
 
 .card-details
 {
-  background-color: #eaeff1;
+  background-color: #79717A;
   font-family: "Raleway", sans-serif;
+  border-radius: 12px;
 }
 
 #container {
@@ -13,8 +14,8 @@
 
 .card {
   
-  background-color: white;
-  border: 1px solid #bacdd8;  
+  background-color:#A68F97;
+  border: 1px solid #4B4952;  
   padding: 8px;
   border-radius: 12px;
   text-align: center;
@@ -27,7 +28,7 @@
   border-radius: 50px;
   font-size: 12px;
   font-weight: 600;
-  color: #788697;
+  color: #2e5f9b;
 }
 
 
@@ -52,8 +53,8 @@ button {
   border-radius: 50px;
 
   font-weight: 600;
-  color: #0077ff;
-  background-color: #e0efff;
+  color: #CEF09D;
+  background-color: #1C646D;
   margin: 0 auto;
   display: block;
   cursor: pointer;
