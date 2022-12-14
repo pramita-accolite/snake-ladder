@@ -33,47 +33,24 @@ assignVal2()
   snakeList : number[] = this.playerService.snakeList;
   ladderList : number[] = this.playerService.ladderList; 
 
-    snakeornot(p : number):boolean{
-        for(let i =0;i<this.snakeList.length; i++)
-        {
-          if (this.snakeList[i]==p)
-          return true;
-        }
-        return false;
+    checkSnake(p : number):boolean{
+       return this.playerService.checkSnake(p);
     }
 
-    ladderornot(p:number):boolean{
-      for(let i =0;i<this.ladderList.length; i++)
-        {
-          if (this.ladderList[i]==p)
-          return true;
-        }
-        return false;
+    checkLadder(p:number):boolean{
+      return this.playerService.checkLadder(p);
     }
 
-    playerornot1(k : number):boolean{
-      if(k==this.val1){
-        return true;
-      }
-      else{
-      return false;
-      }
+    checkPlayer1(p : number):boolean{
+     return this.playerService.checkPlayer1(p);
   }
 
-  playerornot2(k : number):boolean{
-    if(k==this.val2){
-      return true;
-    }
-    else{
-    return false;
-    }
+  checkPlayer2(p : number):boolean{
+    return this.playerService.checkPlayer2(p);
   }
 
-    playerBoth(k :number) :boolean {
-      if(k==this.val1 && k==this.val2)
-      return true;
-      else 
-      return false;
+    checkPlayerBoth(p :number) :boolean {
+    return this.playerService.checkPlayerBoth(p);
     }
 
 

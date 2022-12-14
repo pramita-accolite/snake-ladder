@@ -468,7 +468,48 @@ generateRandomSnake()
 
 }
 
+checkSnake(p : number):boolean{
+  for(let i =0;i<this.snakeList.length; i++)
+  {
+    if (this.snakeList[i]==p)
+    return true;
+  }
+  return false;
+}
 
+checkLadder(p:number):boolean{
+  for(let i =0;i<this.ladderList.length; i++)
+    {
+      if (this.ladderList[i]==p)
+      return true;
+    }
+    return false;
+}
+
+checkPlayer1(k : number):boolean{
+  if(k==this.val1){
+    return true;
+  }
+  else{
+  return false;
+  }
+}
+
+checkPlayer2(k : number):boolean{
+if(k==this.val2){
+  return true;
+}
+else{
+return false;
+}
+}
+
+checkPlayerBoth(k :number) :boolean {
+  if(k==this.val1 && k==this.val2)
+  return true;
+  else 
+  return false;
+}
 
 }
 
