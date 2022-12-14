@@ -6,6 +6,7 @@ import { PlayersService } from './players.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'SnakeLadderGame';
 
@@ -75,7 +76,7 @@ assignVal2()
       return false;
     }
 
-    
+
 }
 
 

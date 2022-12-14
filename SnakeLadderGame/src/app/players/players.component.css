@@ -1,7 +1,7 @@
 
 .card-details
 {
-  background-color: #79717A;
+  background-color: #79717a00;
   font-family: "Raleway", sans-serif;
   border-radius: 12px;
 }
@@ -54,7 +54,7 @@ button {
 
   font-weight: 600;
   color: #CEF09D;
-  background-color: #1C646D;
+  background-color: #1c636d;
   margin: 0 auto;
   display: block;
   cursor: pointer;
