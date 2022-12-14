@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PlayersService } from './players.service';
 
 @Component({
   selector: 'app-root',
@@ -8,50 +9,47 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'SnakeLadderGame';
 
-  board=[[100,99,98,97,96,95,94,93,92,91],
-  [81,82,83,84,85,86,87,88,89,90],
-  [80,79,78,77,76,75,74,73,72,71],
-  [61,62,63,64,65,66,67,68,69,70],
-  [60,59,58,57,56,55,54,53,52,51],
-  [41,42,43,44,45,46,47,48,49,50],
-  [40,39,38,37,36,35,34,33,32,31],
-  [21,22,23,24,25,26,27,28,29,30],
-  [20,19,18,17,16,15,14,13,12,11],
-  [1,2,3,4,5,6,7,8,9,10]];
+  constructor(private playerService : PlayersService)
+  {}
+
+  board = this.playerService.board;
+  board1 = this.playerService.board1;
+
+
   public val1 !: number;
   public val2 !: number;
+
+assignVal1()
+{
+  this.playerService.val1 = this.val1
+}
+
+assignVal2()
+{
+  this.playerService.val2 = this.val2
+}
+
+  snakeList : number[] = this.playerService.snakeList;
+  ladderList : number[] = this.playerService.ladderList; 
+
     snakeornot(p : number):boolean{
-        if(p==26){
-          return true;
-        }
-        else if(p==92)
+        for(let i =0;i<this.snakeList.length; i++)
         {
+          if (this.snakeList[i]==p)
           return true;
         }
-        else if(p==51)
-        {
-          return true;
-        }
-        else{
         return false;
-        }
     }
+
     ladderornot(p:number):boolean{
-      if(p==25){
-        return true;
-      }
-      else if(p==60)
-      {
-        return true;
-      }
-      else if(p==80)
-      {
-        return true;
-      }
-      else{
+      for(let i =0;i<this.ladderList.length; i++)
+        {
+          if (this.ladderList[i]==p)
+          return true;
+        }
         return false;
-      }
     }
+
     playerornot1(k : number):boolean{
       if(k==this.val1){
         return true;
@@ -60,6 +58,7 @@ export class AppComponent {
       return false;
       }
   }
+
   playerornot2(k : number):boolean{
     if(k==this.val2){
       return true;
@@ -67,5 +66,15 @@ export class AppComponent {
     else{
     return false;
     }
+  }
+
+    playerBoth(k :number) :boolean {
+      if(k==this.val1 && k==this.val2)
+      return true;
+      else 
+      return false;
+    }
+
 }
-}
+
+

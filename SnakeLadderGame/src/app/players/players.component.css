@@ -1,26 +1,75 @@
-#button {
-    border: none;
-    color: rgb(228, 18, 18);
-    padding: 35px 32px;
-    font-size: 8pt;
-     /* position:absolute; */
-  }
+
+.card-details
+{
+  background-color: #eaeff1;
+  font-family: "Raleway", sans-serif;
+}
+
+#container {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.card {
+  
+  background-color: white;
+  border: 1px solid #bacdd8;  
+  padding: 8px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tag {
+  padding: 4px 8px;
+  border: 1px solid #e5eaed;
+
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #788697;
+}
+
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+
+  margin-top: 16px;
+}
+
+
+p {
+  font-size: 14px;
+  color: #7f8c9b;
+  line-height: 150%;
+}
+
+
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  color: #0077ff;
+  background-color: #e0efff;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.card__details {
+  padding: 16px 8px 8px 8px;
+}
+
   .btn-info
 {  
   /* background-color:white; */
-    border: none;
-    padding: 15px 32px;
-    font-family: tahoma;
-    margin-top: 15px;
-    margin-left: 3%;
+    border: 100px;
+    padding: 3%;
+    font-family: 'Cedarville Cursive', cursive;
+    align-items: right;
     
-}
-.button2 {
-    /* background-color: white; */
-    border: none;
-    color:  rgb(175, 19, 19);
-    font-family: tahoma;
-    padding: 15px 32px;
-    margin-top: 15px;
-    margin-left: 50%;
+    
 }

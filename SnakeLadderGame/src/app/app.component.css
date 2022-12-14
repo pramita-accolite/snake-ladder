@@ -1,40 +1,66 @@
+
+
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(10,auto);
-    /* background-color: #a2c7e6; */
-    /* padding-left: 22%; */
-    /* width:25px; */
      float: center;
-   /* position: center; */
    justify-content: center;
-   height: 100%;
-   /* overflow: hidden; */
+   height: 80%;
   }
+  
   .heading{
     font-size: 45px;
     font-family:'Kenia';
-    padding-left: 15px;
+    padding-left: 25px;
     margin-left:35% ;
+   
 
   }
   .grid-item {
-    
-    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    border: 1px solid rgba(128, 38, 38, 0.8);
     padding: 8px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
-    /* width:25%; */
+   
     
   }
+
+  
+
+td{
+  padding: auto;
+  width : 200px;
+  height : 50px ;
+  text-align : center;
+}
+
+tr{
+  /* background-color: blue; */
+}
+
   .snake{
     background-color: rgb(243, 124, 124);
+    border-radius: 50px 20px;
+
   }
   .ladder{
     background-color: rgb(245, 245, 110);
+    border-radius: 20px 50px;
+
   }
   .player1{
     background-color: rgb(149, 228, 149);
+    border-radius: 50% 50%;
   }
   .player2{
     background-color: rgb(145, 145, 221);
+    border-radius: 50% 50%;
   }
+
+  .playerboth
+  {
+    background-image: linear-gradient(to right , green, blue);
+  }
+ 

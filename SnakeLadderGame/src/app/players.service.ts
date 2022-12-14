@@ -13,21 +13,21 @@ export class PlayersService {
     return diceValue;
   }
 
-//   board:number[][] = [[100,99,98,97,96,95,94,93,92,91],
-//                       [81,82,83,84,85,86,87,88,89,90],
-//                       [80,79,78,77,76,75,74,73,72,71],
-//                       [61,62,63,64,65,66,67,68,69,70],
-//                       [60,59,58,57,56,55,54,53,52,51],
-//                       [41,42,43,44,45,46,47,48,49,50],
-//                       [40,39,38,37,36,35,34,33,32,31],
-//                       [21,22,23,24,25,26,27,28,29,30],
-//                       [20,19,18,17,16,15,14,13,12,11],
-//                       [1,2,3,4,5,6,7,8,9,10]];
 
-// getBoard() : number[][]
-// {
-//  return this.board;
-// }
+  board=[[100,99,98,97,96,95,94,93,92,91],
+  [81,82,83,84,85,86,87,88,89,90],
+  [80,79,78,77,76,75,74,73,72,71],
+  [61,62,63,64,65,66,67,68,69,70],
+  [60,59,58,57,56,55,54,53,52,51],
+  [41,42,43,44,45,46,47,48,49,50],
+  [40,39,38,37,36,35,34,33,32,31],
+  [21,22,23,24,25,26,27,28,29,30],
+  [20,19,18,17,16,15,14,13,12,11],
+  [1,2,3,4,5,6,7,8,9,10]];
+
+  snakeList : number[] = [26,92,51,97]
+  ladderList : number[] = [25,60,80]
+
 board1= [
   {"curr_pos": 1,
     "take_to": 1},
@@ -403,7 +403,7 @@ board1= [
       },
       {
       "curr_pos": 97,
-      "take_to": 97
+      "take_to": 7
       },
       {"curr_pos": 98,
           "take_to": 98
@@ -418,25 +418,96 @@ board1= [
         }
 ];
 
+val1 : number = 0;
+val2 : number = 0;
 
 public z1: number = 0;
 public z2: number = 0;
 
-checkPos(pos:number): number{
-  if(pos>100)
-  {
-    return 0;
-  }
-   
+checkPos(pos:number): number
+{
  this.z1  = this.board1[pos].curr_pos;
-  this.z2= this.board1[pos].take_to;
-  if(this.z1!=this.z2){
+ this.z2= this.board1[pos].take_to;
+  
+  if(this.z1!=this.z2)
   return this.z2;
-}
-else{
+else
   return this.z1;
 }
 
+
+generateRandomSnake()
+{
+  
+  let randomCurrPos : number = Math.floor(Math.random() *100  )+1
+  let randomTakeToPos : number =  Math.floor(Math.random() *100 )+1
+
+  if (randomCurrPos > randomTakeToPos  )
+  {
+    this.snakeList.push(randomCurrPos);
+    this.board1[randomCurrPos-1] = {"curr_pos" : randomCurrPos , "take_to" : randomTakeToPos}
+
+    console.log("Currpos "+randomCurrPos)
+    console.log("taketo"+randomTakeToPos)
+  }
+  else if(randomCurrPos==randomTakeToPos)
+  {
+    return;
+  }
+  else
+  {
+    this.ladderList.push(randomCurrPos);
+    this.board1[randomCurrPos-1]= {"curr_pos" : randomCurrPos , "take_to" : randomTakeToPos}
+
+    console.log("Currpos "+randomCurrPos)
+    console.log("taketo"+randomTakeToPos)
+  }
+
 }
+
+snakeornot(p : number):boolean{
+  for(let i =0;i<this.snakeList.length; i++)
+  {
+    if (this.snakeList[i]==p)
+    return true;
+  }
+  return false;
+}
+
+ladderornot(p:number):boolean{
+for(let i =0;i<this.ladderList.length; i++)
+  {
+    if (this.ladderList[i]==p)
+    return true;
+  }
+  return false;
+}
+
+playerornot1(k : number):boolean{
+if(k==this.val1){
+  return true;
+}
+else{
+return false;
+}
+}
+
+playerornot2(k : number):boolean{
+if(k==this.val2){
+return true;
+}
+else{
+return false;
+}
+}
+
+playerBoth(k :number) :boolean {
+if(k==this.val1 && k==this.val2)
+return true;
+else 
+return false;
+}
+
+
 }
 
