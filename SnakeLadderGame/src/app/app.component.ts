@@ -33,27 +33,69 @@ assignVal2()
   snakeList : number[] = this.playerService.snakeList;
   ladderList : number[] = this.playerService.ladderList; 
 
-    checkSnake(p : number):boolean{
-       return this.playerService.checkSnake(p);
-    }
+  //   checkSnake(p : number):boolean{
+  //      return this.playerService.checkSnake(p);
+  //   }
 
-    checkLadder(p:number):boolean{
-      return this.playerService.checkLadder(p);
-    }
+  //   checkLadder(p:number):boolean{
+  //     return this.playerService.checkLadder(p);
+  //   }
 
-    checkPlayer1(p : number):boolean{
-     return this.playerService.checkPlayer1(p);
+  //   checkPlayer1(p : number):boolean{
+  //    return this.playerService.checkPlayer1(p);
+  // }
+
+  // checkPlayer2(p : number):boolean{
+  //   return this.playerService.checkPlayer2(p);
+  // }
+
+  //   checkPlayerBoth(p :number) :boolean {
+  //   return this.playerService.checkPlayerBoth(p);
+  //   }
+
+  checkSnake(p : number):boolean{
+    for(let i =0;i<this.snakeList.length; i++)
+    {
+      if (this.snakeList[i]==p)
+      return true;
+    }
+    return false;
   }
-
-  checkPlayer2(p : number):boolean{
-    return this.playerService.checkPlayer2(p);
+  
+  checkLadder(p:number):boolean{
+    for(let i =0;i<this.ladderList.length; i++)
+      {
+        if (this.ladderList[i]==p)
+        return true;
+      }
+      return false;
   }
-
-    checkPlayerBoth(p :number) :boolean {
-    return this.playerService.checkPlayerBoth(p);
+  
+  checkPlayer1(k : number):boolean{
+    if(k==this.val1){
+      return true;
     }
-
-
+    else{
+    return false;
+    }
+  }
+  
+  checkPlayer2(k : number):boolean{
+  if(k==this.val2){
+    return true;
+  }
+  else{
+  return false;
+  }
+  }
+  
+  checkPlayerBoth(k :number) :boolean {
+    if(k==this.val1 && k==this.val2)
+    return true;
+    else 
+    return false;
+  }
+  
 }
 
 

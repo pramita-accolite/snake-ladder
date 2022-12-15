@@ -15,7 +15,7 @@
           <div class="container">
               <tr *ngFor="let row of board">
               <td *ngFor="let num of row" >
-                  <div [class.snake]="snakeornot(num)" [class.ladder]="ladderornot(num)" [class.player1]="playerornot1(num)" [class.player2]="playerornot2(num)" [class.playerboth]="playerBoth(num)">
+                  <div [class.snake]="checkSnake(num)" [class.ladder]="checkLadder(num)" [class.player1]="checkPlayer1(num)" [class.player2]="checkPlayer2(num)" [class.playerboth]="checkPlayerBoth(num)">
                     <div class="grid-item" >{{num}}</div>
                   </div>
               </td>
